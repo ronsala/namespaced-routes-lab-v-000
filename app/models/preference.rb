@@ -1,3 +1,2 @@
-# class Preference < ActiveRecord::Base
-class Preference < Admin
+class Preference < ActiveRecord::Base
 end
