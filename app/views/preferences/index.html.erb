@@ -1,14 +1,6 @@
-html5-boilerplate
-
-<h2>Preferences</h2>
-<p>Song Sort Order
-<input type=
- name=
- value=
-</input>
-<input </input>
-<input type=
-</input>
-<input type=
-</input>
-<h2></h2>
+<%= form_tag do%>
+  <h2>Preferences</h2>
+  <h3>Song Sort Order:</h3>
+    <p><input type="radio" name="song_sort" value="ASC"> ASC</p>
+    <p><input type="radio" name="song_sort" value="DSC"> DSC</p>
+<% end %>
