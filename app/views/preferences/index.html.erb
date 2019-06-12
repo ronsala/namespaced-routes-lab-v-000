@@ -1,6 +1,5 @@
 <h2>Preferences</h2>
-<h3>Song Sort Order:</h3>
-<p><%= @preferences.song_sort_order %></p>
-<h3>Artist Sort Order:</h3>
-<p><%= @preferences.artist_sort_order %></p>
+<h3>Song Sort Order: <%= @preferences.song_sort_order %></h3>
+<h3>Artist Sort Order: <%= @preferences.artist_sort_order %></h3>
+<h3>Allow Creating Songs: <%= @preferences.allow_create_songs %></h3>
 </p><a href='<%= edit_admin_preference_path(@preferences) %>'>Edit Preferences</a></p>

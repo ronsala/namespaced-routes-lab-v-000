@@ -13,7 +13,7 @@
     def update
       # binding.pry
       @preferences = Preference.first
-      @preferences.update(song_sort_order: params[:song_sort_order], artist_sort_order: params[:artist_sort_order])
+      @preferences.update(song_sort_order: params[:song_sort_order], artist_sort_order: params[:artist_sort_order], allow_create_songs: params[:allow_create_songs])
       redirect_to admin_preferences_path(@preferences)
     end
   end
