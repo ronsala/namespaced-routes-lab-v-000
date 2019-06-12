@@ -1,6 +1,10 @@
 class ArtistsController < ApplicationController
   def index
-    @artists = Artist.all
+    if Preference&.first&.artist_sort_order == "DESC"
+      @artists = Artist.order(name: :desc)
+    else
+      @artists = Artist.order(name: :asc)
+    end
   end
 
   def show
