@@ -8,7 +8,11 @@ class SongsController < ApplicationController
         @songs = @artist.songs
       end
     else
-      @songs = Song.all
+      # if Preference.first.song_sort_order == "ASC"
+        @songs = Song.order(title: :asc)
+      # else
+      #   @songs = Song.order(title: :desc)
+      # end
     end
   end
 

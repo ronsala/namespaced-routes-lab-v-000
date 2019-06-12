@@ -9,6 +9,8 @@
     <% flash.each do |name, msg| -%>
       <%= content_tag :div, msg, class: name %>
     <% end -%>
-    <%= yield %>
+    <%= yield %><br><br>
+    <a href='<%= songs_path %>'>Songs</a> <a href='<%= admin_preferences_path %>'>Preferences</a>
+    
   </body>
 </html>
