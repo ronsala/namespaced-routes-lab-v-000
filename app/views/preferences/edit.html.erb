@@ -1,7 +1,10 @@
 <%= form_tag(admin_preference_path, method: "patch") do%>
   <h2>Preferences</h2>
   <h3>Song Sort Order:</h3>
-    <p><input type="radio" name="song_sort_order" value="ASC"> ASC</p>
+    <p><input type="radio" name="song_sort_order" value="ASC" checked="true"> ASC</p>
     <p><input type="radio" name="song_sort_order" value="DESC"> DESC</p>
+  <h3>Artist Sort Order:</h3>
+    <p><input type="radio" name="artist_sort_order" value="ASC" checked="true"> ASC</p>
+    <p><input type="radio" name="artist_sort_order" value="DESC"> DESC</p>
     <%= submit_tag %>
 <% end %>
