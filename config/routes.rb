@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   namespace :admin do
-    resources :preferences, only: %i[index edit]
+    resources :preferences, only: %i[index edit update]
   end
 
   resources :artists do

@@ -1,5 +1,17 @@
   class Admin::PreferencesController < ApplicationController
     def index
+      @preferences = Preference.first
       render 'preferences/index'
+    end
+
+    def edit
+      @preferences = Preference.first
+      render 'preferences/edit'
+    end
+
+    def update
+      @preferences = Preference.first
+      @preferences.update(song_sort_order: params[:song_sort_order])
+      redirect_to admin_preferences_path(@preferences)
     end
   end
